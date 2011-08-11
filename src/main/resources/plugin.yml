@@ -1,6 +1,7 @@
 name: SpoutTest
-version: 1.0.0.${build.number}
+version: 0.0.1.${build.number}
 description: Testing and demonstration suite for Spout.
 authors: [SpoutDev, Afforess, Wulfspider, alta189, Raphfrk, narrowtux, Top_Cat]
+website: http://www.getspout.org
 
-main: org.getspout.test.Test
+main: org.getspout.spouttest.SpoutTest
