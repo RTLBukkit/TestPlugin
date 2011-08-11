@@ -1,0 +1,5 @@
+name: SpoutTest
+version: 1.0.0
+description: Spout Test
+
+main: org.getspout.Test.Test
