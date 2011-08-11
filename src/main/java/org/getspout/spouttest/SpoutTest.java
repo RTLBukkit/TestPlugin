@@ -1,4 +1,4 @@
-package org.getspout;
+package org.getspout.spouttest;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
