@@ -21,7 +21,7 @@ import org.getspout.spoutapi.gui.GenericTextField;
 import org.getspout.spoutapi.keyboard.Keyboard;
 import org.getspout.spoutapi.player.SpoutPlayer;
 
-public class Test extends JavaPlugin {
+public class SpoutTest extends JavaPlugin {
 
 	@Override
 	public void onDisable() {
