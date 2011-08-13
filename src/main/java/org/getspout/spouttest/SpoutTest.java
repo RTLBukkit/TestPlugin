@@ -107,10 +107,10 @@ public class SpoutTest extends JavaPlugin {
 				((SpoutPlayer) event.getPlayer()).sendNotification(ChatColor.RED + "Party time is now! " + ChatColor.YELLOW + "Oh yeah", "Testing", Material.CAKE);
 			} else if (event.getKey() == Keyboard.KEY_C) {
 				((SpoutPlayer) event.getPlayer()).resetTexturePack();
-			} else if (event.getKey() == Keyboard.KEY_A) {
+			} else if (event.getKey() == Keyboard.KEY_B) {
 				event.getPlayer().getMainScreen().attachPopupScreen(popup);
 				//popup.setDirty(true);
-			} else if (event.getKey() == Keyboard.KEY_S) {
+			} else if (event.getKey() == Keyboard.KEY_N) {
 				event.getPlayer().getMainScreen().closePopup();
 			}
 		}
