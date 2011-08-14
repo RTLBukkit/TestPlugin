@@ -95,7 +95,7 @@ public class SpoutTest extends JavaPlugin {
 			popup.attachWidget(plugin, ((GenericLabel) new GenericLabel("Some\nLonger Text\nis").setHexColor(0xFFFFFF).setAlignY(Align.THIRD)).setAlignX(Align.SECOND).setX(0).setY(0).setHeight(240).setWidth(427));
 			popup.attachWidget(plugin, ((GenericLabel) new GenericLabel("Some\nLonger Text\nis").setHexColor(0xFFFFFF).setAlignY(Align.THIRD)).setAlignX(Align.THIRD).setX(0).setY(0).setHeight(240).setWidth(427));
 			
-			popup.attachWidget(plugin, new GenericLabel("Bottom right of middle").setHexColor(0xFFFFFF).setX(130).setY(230).setHeight(427).setWidth(240));
+			popup.attachWidget(plugin, new GenericLabel("Bottom right of middle").setHexColor(0xFFFFFF).setX(230).setY(130));
 			
 			event.getPlayer().setTexturePack("http://dl.dropbox.com/u/7186172/Foliacraft.zip");
 			
