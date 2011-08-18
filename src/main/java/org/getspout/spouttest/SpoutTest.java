@@ -10,6 +10,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.Event.Priority;
 import org.bukkit.event.Event.Type;
 import org.bukkit.event.player.PlayerChatEvent;
+import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.player.PlayerListener;
 import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.plugin.Plugin;
@@ -35,7 +36,6 @@ import org.getspout.spoutapi.gui.GenericTexture;
 import org.getspout.spoutapi.gui.RenderPriority;
 import org.getspout.spoutapi.gui.WidgetAnchor;
 import org.getspout.spoutapi.keyboard.Keyboard;
-import org.getspout.spoutapi.player.SpoutPlayer;
 
 public class SpoutTest extends JavaPlugin {
 
@@ -125,7 +125,7 @@ public class SpoutTest extends JavaPlugin {
 			
 			event.getPlayer().setTexturePack("http://dl.dropbox.com/u/7186172/Foliacraft.zip");
 			
-			((SpoutPlayer) event.getPlayer()).getMainScreen().attachPopupScreen(popup);
+			SpoutManager.getPlayer(event.getPlayer()).getMainScreen().attachPopupScreen(popup);
 		}
 		
 	}
@@ -137,9 +137,9 @@ public class SpoutTest extends JavaPlugin {
 			if (event.getKey() == Keyboard.KEY_L) {
 				SpoutManager.getAppearanceManager().setGlobalSkin(event.getPlayer(), "http://s3.amazonaws.com/MinecraftSkins/Top_Cat.png");
 			} else if (event.getKey() == Keyboard.KEY_M) {
-				((SpoutPlayer) event.getPlayer()).sendNotification(ChatColor.RED + "Party time is now! " + ChatColor.YELLOW + "Oh yeah", "Testing", Material.CAKE);
+				SpoutManager.getPlayer(event.getPlayer()).sendNotification(ChatColor.RED + "Party time is now! " + ChatColor.YELLOW + "Oh yeah", "Testing", Material.CAKE);
 			} else if (event.getKey() == Keyboard.KEY_C) {
-				((SpoutPlayer) event.getPlayer()).resetTexturePack();
+				SpoutManager.getPlayer(event.getPlayer()).resetTexturePack();
 			} else if (event.getKey() == Keyboard.KEY_B) {
 
 				popup = new GenericPopup();
@@ -165,10 +165,10 @@ public class SpoutTest extends JavaPlugin {
 		@Override
 		public void onButtonClick(ButtonClickEvent event) {
 			if (event.getButton() instanceof GenericButton && event.getButton().getText().equals("Test")) {
-				((SpoutPlayer) event.getPlayer()).getMainScreen().closePopup();
+				SpoutManager.getPlayer(event.getPlayer()).getMainScreen().closePopup();
 				event.getScreen().setDirty(true);
-				((SpoutPlayer) event.getPlayer()).getMainScreen().attachWidget(plugin, ((GenericLabel) new GenericLabel("I'm on the main screen!").setHexColor(0xFFFFFF)).setX(0).setY(0).setHeight(240).setWidth(427));
-				((SpoutPlayer) event.getPlayer()).getMainScreen().attachWidget(plugin, (GenericTexture) new GenericTexture("http://i.imgur.com/GFEBP.png").setWidth(64).setHeight(64).setX(100).setY(100));
+				SpoutManager.getPlayer(event.getPlayer()).getMainScreen().attachWidget(plugin, ((GenericLabel) new GenericLabel("I'm on the main screen!").setHexColor(0xFFFFFF)).setX(0).setY(0).setHeight(240).setWidth(427));
+				SpoutManager.getPlayer(event.getPlayer()).getMainScreen().attachWidget(plugin, (GenericTexture) new GenericTexture("http://i.imgur.com/GFEBP.png").setWidth(64).setHeight(64).setX(100).setY(100));
 				event.getPlayer().sendMessage("Button test successful!");
 			}
 		}
