@@ -5,3 +5,4 @@ authors: [SpoutDev, Afforess, Wulfspider, alta189, Raphfrk, narrowtux, Top_Cat]
 website: http://www.getspout.org
 
 main: org.getspout.spouttest.SpoutTest
+depend: [Spout]

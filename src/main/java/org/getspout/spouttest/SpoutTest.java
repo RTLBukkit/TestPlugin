@@ -13,6 +13,7 @@ import org.bukkit.event.player.PlayerChatEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.player.PlayerListener;
 import org.bukkit.event.player.PlayerMoveEvent;
+import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.getspout.spoutapi.SpoutManager;
@@ -28,6 +29,7 @@ import org.getspout.spoutapi.gui.Container;
 import org.getspout.spoutapi.gui.GenericButton;
 import org.getspout.spoutapi.gui.GenericContainer;
 import org.getspout.spoutapi.gui.GenericGradient;
+import org.getspout.spoutapi.gui.GenericItemWidget;
 import org.getspout.spoutapi.gui.GenericLabel;
 import org.getspout.spoutapi.gui.GenericPopup;
 import org.getspout.spoutapi.gui.GenericSlider;
@@ -70,7 +72,7 @@ public class SpoutTest extends JavaPlugin {
 				movement.put(event.getPlayer(), movement.get(event.getPlayer()) + 1);
 			}
 			if (!labels.containsKey(event.getPlayer())) {
-				GenericLabel label = (GenericLabel) ((GenericLabel) new GenericLabel().setHexColor(0xFFFFFF)).setX(240).setY(0);
+				GenericLabel label = (GenericLabel) ((GenericLabel) new GenericLabel().setTextColor(new Color(1, 1, 1))).setX(240).setY(0);
 				SpoutManager.getPlayer(event.getPlayer()).getMainScreen().attachWidget(plugin, label);
 				labels.put(event.getPlayer(), label);
 				aContainer.addChild(label);
@@ -111,17 +113,18 @@ public class SpoutTest extends JavaPlugin {
 			popup.attachWidget(plugin, new GenericTextField().setMaximumCharacters(50).setX(-50).setY(-50).setHeight(20).setWidth(50).setAnchor(WidgetAnchor.CENTER_CENTER));
 			popup.attachWidget(plugin, new GenericSlider().setX(-100).setY(20).setHeight(20).setWidth(200).setAnchor(WidgetAnchor.CENTER_CENTER));
 			
-			popup.attachWidget(plugin, new GenericLabel("Some\nLonger Text\nis").setHexColor(0xFFFFFF).setAlign(WidgetAnchor.TOP_LEFT).setAnchor(WidgetAnchor.TOP_LEFT)).setX(50).setY(50);
-			popup.attachWidget(plugin, new GenericLabel("Some\nLonger Text\nis").setHexColor(0xFFFFFF).setAlign(WidgetAnchor.TOP_CENTER).setAnchor(WidgetAnchor.TOP_CENTER));
-			popup.attachWidget(plugin, new GenericLabel("Some\nLonger Text\nis").setHexColor(0xFFFFFF).setAlign(WidgetAnchor.TOP_RIGHT).setAnchor(WidgetAnchor.TOP_RIGHT));
-			popup.attachWidget(plugin, new GenericLabel("Some\nLonger Text\nis").setHexColor(0xFFFFFF).setAlign(WidgetAnchor.CENTER_LEFT).setAnchor(WidgetAnchor.CENTER_LEFT).setX(0).setY(0).setHeight(240).setWidth(427));
-			popup.attachWidget(plugin, new GenericLabel("Some\nLonger Text\nis").setHexColor(0xFFFFFF).setAlign(WidgetAnchor.CENTER_CENTER).setAnchor(WidgetAnchor.CENTER_CENTER).setX(0).setY(0).setHeight(240).setWidth(427));
-			popup.attachWidget(plugin, new GenericLabel("Some\nLonger Text\nis").setHexColor(0xFFFFFF).setAlign(WidgetAnchor.CENTER_RIGHT).setAnchor(WidgetAnchor.CENTER_RIGHT).setX(0).setY(0).setHeight(240).setWidth(427));
-			popup.attachWidget(plugin, new GenericLabel("Some\nLonger Text\nis").setHexColor(0xFFFFFF).setAlign(WidgetAnchor.BOTTOM_LEFT).setAnchor(WidgetAnchor.BOTTOM_LEFT).setX(0).setY(0));
-			popup.attachWidget(plugin, new GenericLabel("Some\nLonger Text\nis").setHexColor(0xFFFFFF).setAlign(WidgetAnchor.BOTTOM_CENTER).setAnchor(WidgetAnchor.BOTTOM_CENTER).setX(0).setY(0));
-			popup.attachWidget(plugin, new GenericLabel("Some\nLonger Text\nis").setHexColor(0xFFFFFF).setAlign(WidgetAnchor.BOTTOM_RIGHT).setAnchor(WidgetAnchor.BOTTOM_RIGHT).setX(0).setY(0));
+			popup.attachWidget(plugin, new GenericLabel("Some\nLonger Text\nis").setTextColor(new Color(1, 1, 1)).setAlign(WidgetAnchor.TOP_LEFT).setAnchor(WidgetAnchor.TOP_LEFT)).setX(50).setY(50);
+			popup.attachWidget(plugin, new GenericLabel("Some\nLonger Text\nis").setTextColor(new Color(1, 1, 1)).setAlign(WidgetAnchor.TOP_CENTER).setAnchor(WidgetAnchor.TOP_CENTER));
+			popup.attachWidget(plugin, new GenericLabel("Some\nLonger Text\nis").setTextColor(new Color(1, 1, 1)).setAlign(WidgetAnchor.TOP_RIGHT).setAnchor(WidgetAnchor.TOP_RIGHT));
+			popup.attachWidget(plugin, new GenericLabel("Some\nLonger Text\nis").setTextColor(new Color(1, 1, 1)).setAlign(WidgetAnchor.CENTER_LEFT).setAnchor(WidgetAnchor.CENTER_LEFT).setX(0).setY(0).setHeight(240).setWidth(427));
+			popup.attachWidget(plugin, new GenericLabel("Some\nLonger Text\nis").setTextColor(new Color(1, 1, 1)).setAlign(WidgetAnchor.CENTER_CENTER).setAnchor(WidgetAnchor.CENTER_CENTER).setX(0).setY(0).setHeight(240).setWidth(427));
+			popup.attachWidget(plugin, new GenericLabel("Some\nLonger Text\nis").setTextColor(new Color(1, 1, 1)).setAlign(WidgetAnchor.CENTER_RIGHT).setAnchor(WidgetAnchor.CENTER_RIGHT).setX(0).setY(0).setHeight(240).setWidth(427));
+			popup.attachWidget(plugin, new GenericLabel("Some\nLonger Text\nis").setTextColor(new Color(1, 1, 1)).setAlign(WidgetAnchor.BOTTOM_LEFT).setAnchor(WidgetAnchor.BOTTOM_LEFT).setX(0).setY(0));
+			popup.attachWidget(plugin, new GenericLabel("Some\nLonger Text\nis").setTextColor(new Color(1, 1, 1)).setAlign(WidgetAnchor.BOTTOM_CENTER).setAnchor(WidgetAnchor.BOTTOM_CENTER).setX(0).setY(0));
+			popup.attachWidget(plugin, new GenericLabel("Some\nLonger Text\nis").setTextColor(new Color(1, 1, 1)).setAlign(WidgetAnchor.BOTTOM_RIGHT).setAnchor(WidgetAnchor.BOTTOM_RIGHT).setX(0).setY(0));
 			
-			popup.attachWidget(plugin, new GenericLabel("Bottom right of middle").setHexColor(0xFFFFFF).setX(230).setY(130));
+			popup.attachWidget(plugin, new GenericItemWidget(new ItemStack(Material.STONE)).setWidth(8).setHeight(8).setDepth(8).setX(50).setY(50).setTooltip("I'm a tool"));
+			popup.attachWidget(plugin, new GenericLabel("Bottom right of middle").setTextColor(new Color(1, 1, 1)).setX(230).setY(130));
 			
 			event.getPlayer().setTexturePack("http://dl.dropbox.com/u/7186172/Foliacraft.zip");
 			
@@ -166,8 +169,21 @@ public class SpoutTest extends JavaPlugin {
 		public void onButtonClick(ButtonClickEvent event) {
 			if (event.getButton() instanceof GenericButton && event.getButton().getText().equals("Test")) {
 				SpoutManager.getPlayer(event.getPlayer()).getMainScreen().closePopup();
-				event.getScreen().setDirty(true);
-				SpoutManager.getPlayer(event.getPlayer()).getMainScreen().attachWidget(plugin, ((GenericLabel) new GenericLabel("I'm on the main screen!").setHexColor(0xFFFFFF)).setX(0).setY(0).setHeight(240).setWidth(427));
+				
+				popup = new GenericPopup();
+				popup.attachWidget(plugin, new GenericButton("Test").setY(-75).setX(-70).setHeight(20).setWidth(150).setAnchor(WidgetAnchor.CENTER_CENTER).setTooltip("Hiya"));
+				
+				Random r = new Random();
+				for (int i = 0; i < 15; i++) {
+					int x = -150 + i * 20;
+					int y = -40;
+					popup.attachWidget(plugin, new GenericGradient().setTopColor(new Color(r.nextFloat(), r.nextFloat(), r.nextFloat(), 1)).setAnchor(WidgetAnchor.BOTTOM_CENTER).setWidth(20).setHeight(20).setX(x).setY(y).setPriority(RenderPriority.Low));
+					popup.attachWidget(plugin, new GenericLabel(i+"").setAnchor(WidgetAnchor.BOTTOM_CENTER).setWidth(20).setHeight(20).setX(x + 5).setY(y + 5).setPriority(RenderPriority.Lowest));
+				}
+				
+				event.getPlayer().getMainScreen().attachPopupScreen(popup);
+				popup.setDirty(true);
+				SpoutManager.getPlayer(event.getPlayer()).getMainScreen().attachWidget(plugin, ((GenericLabel) new GenericLabel("I'm on the main screen!").setTextColor(new Color(1, 1, 1))).setX(0).setY(0).setHeight(240).setWidth(427));
 				SpoutManager.getPlayer(event.getPlayer()).getMainScreen().attachWidget(plugin, (GenericTexture) new GenericTexture("http://i.imgur.com/GFEBP.png").setWidth(64).setHeight(64).setX(100).setY(100));
 				event.getPlayer().sendMessage("Button test successful!");
 			}
