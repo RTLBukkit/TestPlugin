@@ -1,8 +1,8 @@
 <!--
-  Maven build file for SpoutTest
+  Maven build file for TestPlugin
 
   Copyright (c) 2011 SpoutDev <http://www.getspout.org>
-  SpoutTest is licensed under GNU LESSER GENERAL PUBLIC LICENSE Version 3
+  TestPlugin is licensed under GNU LESSER GENERAL PUBLIC LICENSE Version 3
 -->
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -10,11 +10,11 @@
 
     <!-- Project information -->
     <groupId>org.getspout</groupId>
-    <artifactId>spouttest</artifactId>
+    <artifactId>testplugin</artifactId>
     <version>dev-SNAPSHOT</version>
-    <name>SpoutTest</name>
+    <name>TestPlugin</name>
     <url>http://www.getspout.org</url>
-    <description>Testing and demonstration suite for Spout.</description>
+    <description>Testing and demonstration plugin using SpoutAPI.</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -69,7 +69,7 @@
             <scope>provided</scope>
         </dependency>
     </dependencies>
-   
+
     <build>
         <defaultGoal>clean package</defaultGoal>
         <sourceDirectory>${basedir}/src/main/java</sourceDirectory>
@@ -81,6 +81,14 @@
                 <directory>${basedir}/src/main/resources</directory>
                 <includes>
                     <include>plugin.yml</include>
+                </includes>
+            </resource>
+            <resource>
+                <targetPath>.</targetPath>
+                <filtering>false</filtering>
+                <directory>${basedir}</directory>
+                <includes>
+                    <include>LICENSE.txt</include>
                 </includes>
             </resource>
         </resources>
@@ -96,7 +104,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
-                <version>2.3.1</version>
+                <version>2.3.2</version>
             </plugin>
         </plugins>
     </build>

@@ -1,8 +1,9 @@
-name: SpoutTest
+name: TestPlugin
 version: 0.0.1.${build.number}
-description: Testing and demonstration suite for Spout.
+description: Testing and demonstration plugin using SpoutAPI.
 authors: [SpoutDev, Afforess, Wulfspider, alta189, Raphfrk, narrowtux, Top_Cat]
 website: http://www.getspout.org
 
-main: org.getspout.spouttest.SpoutTest
+main: org.getspout.testplugin.TestPlugin
+
 depend: [Spout]
