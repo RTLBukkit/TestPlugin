@@ -16,7 +16,7 @@ public class TestScreenListener extends ScreenListener {
 			if (tries > 3) {
 				((SpoutPlayer) event.getPlayer()).getMainScreen().closePopup();
 				event.getScreen().setDirty(true);
-				((SpoutPlayer) event.getPlayer()).getMainScreen().attachWidget(null,((GenericLabel) new GenericLabel("I'm on the main screen!").setAlignY(Align.FIRST)).setAlignX(Align.FIRST).setX(0).setY(0).setHeight(427).setWidth(240));
+				((SpoutPlayer) event.getPlayer()).getMainScreen().attachWidget(null,((GenericLabel) new GenericLabel("I'm on the main screen!").setX(0).setY(0).setHeight(427).setWidth(240));
 			}
 			else {
 				tries++;
