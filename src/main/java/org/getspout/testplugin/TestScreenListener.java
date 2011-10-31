@@ -2,9 +2,7 @@ package org.getspout.testplugin;
 
 import org.getspout.spoutapi.event.screen.ButtonClickEvent;
 import org.getspout.spoutapi.event.screen.ScreenListener;
-import org.getspout.spoutapi.gui.Align;
-import org.getspout.spoutapi.gui.GenericButton;
-import org.getspout.spoutapi.gui.GenericLabel;
+import org.getspout.spoutapi.gui.*;
 import org.getspout.spoutapi.player.SpoutPlayer;
 
 public class TestScreenListener extends ScreenListener {
