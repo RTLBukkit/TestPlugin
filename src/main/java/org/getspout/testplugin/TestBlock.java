@@ -11,7 +11,7 @@ public class TestBlock extends GenericCubeCustomBlock {
 	public static Texture texture = new Texture(textureUrl, 16, 16, 16);
 
 	public TestBlock(Plugin plugin) {
-		super(plugin, "CustomBlock", true, new GenericCubeBlockDesign(plugin, texture, 0), 0);
+		//super(plugin, "CustomBlock", true, new GenericCubeBlockDesign(plugin, texture, 0), 0);
 	}
 
 }
