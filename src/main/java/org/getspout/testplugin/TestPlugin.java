@@ -21,7 +21,7 @@ public class TestPlugin extends JavaPlugin {
 
 	public void onEnable() {
 		
-		testBlock = new TestBlock(this);
+		//testBlock = new TestBlock(this);
 		
 		getServer().getPluginManager().registerEvent(Type.CUSTOM_EVENT, new TestSpoutListener(), Priority.Normal, this);
 		getServer().getPluginManager().registerEvent(Type.CUSTOM_EVENT, new TestInputListener(), Priority.Normal, this);
