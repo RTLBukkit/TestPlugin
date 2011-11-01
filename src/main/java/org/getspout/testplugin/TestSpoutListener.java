@@ -19,15 +19,15 @@ public class TestSpoutListener extends SpoutListener {
 		popup.attachWidget(null, new GenericButton("Test").setAlignX(Align.FIRST).setX(70).setY(102).setHeight(35).setWidth(100));
 		popup.attachWidget(null, new GenericTextField().setX(70).setY(142).setHeight(35).setWidth(100));
 		popup.attachWidget(null, new GenericSlider().setX(70).setY(242).setHeight(35).setWidth(100));
-		popup.attachWidget(null, ((GenericLabel) new GenericLabel("Some\nLonger Text\nis").setAlignY(Align.FIRST)).setAlignX(Align.FIRST).setX(0).setY(0).setHeight(427).setWidth(240));
-		popup.attachWidget(null, ((GenericLabel) new GenericLabel("Some\nLonger Text\nis").setAlignY(Align.FIRST)).setAlignX(Align.SECOND).setX(0).setY(0).setHeight(427).setWidth(240));
-		popup.attachWidget(null, ((GenericLabel) new GenericLabel("Some\nLonger Text\nis").setAlignY(Align.FIRST)).setAlignX(Align.THIRD).setX(0).setY(0).setHeight(427).setWidth(240));
-		popup.attachWidget(null, ((GenericLabel) new GenericLabel("Some\nLonger Text\nis").setAlignY(Align.SECOND)).setAlignX(Align.FIRST).setX(0).setY(0).setHeight(427).setWidth(240));
-		popup.attachWidget(null, ((GenericLabel) new GenericLabel("Some\nLonger Text\nis").setAlignY(Align.SECOND)).setAlignX(Align.SECOND).setX(0).setY(0).setHeight(427).setWidth(240));
-		popup.attachWidget(null, ((GenericLabel) new GenericLabel("Some\nLonger Text\nis").setAlignY(Align.SECOND)).setAlignX(Align.THIRD).setX(0).setY(0).setHeight(427).setWidth(240));
-		popup.attachWidget(null, ((GenericLabel) new GenericLabel("Some\nLonger Text\nis").setAlignY(Align.THIRD)).setAlignX(Align.FIRST).setX(0).setY(0).setHeight(427).setWidth(240));
-		popup.attachWidget(null, ((GenericLabel) new GenericLabel("Some\nLonger Text\nis").setAlignY(Align.THIRD)).setAlignX(Align.SECOND).setX(0).setY(0).setHeight(427).setWidth(240));
-		popup.attachWidget(null, ((GenericLabel) new GenericLabel("Some\nLonger Text\nis").setAlignY(Align.THIRD)).setAlignX(Align.THIRD).setX(0).setY(0).setHeight(427).setWidth(240));
+		popup.attachWidget(null, ((GenericLabel) new GenericLabel("Some\nLonger Text\nis").setX(0).setY(0).setHeight(427).setWidth(240)));
+		popup.attachWidget(null, ((GenericLabel) new GenericLabel("Some\nLonger Text\nis").setX(0).setY(0).setHeight(427).setWidth(240)));
+		popup.attachWidget(null, ((GenericLabel) new GenericLabel("Some\nLonger Text\nis").setX(0).setY(0).setHeight(427).setWidth(240)));
+		popup.attachWidget(null, ((GenericLabel) new GenericLabel("Some\nLonger Text\nis").setX(0).setY(0).setHeight(427).setWidth(240)));
+		popup.attachWidget(null, ((GenericLabel) new GenericLabel("Some\nLonger Text\nis").setX(0).setY(0).setHeight(427).setWidth(240)));
+		popup.attachWidget(null, ((GenericLabel) new GenericLabel("Some\nLonger Text\nis").setX(0).setY(0).setHeight(427).setWidth(240)));
+		popup.attachWidget(null, ((GenericLabel) new GenericLabel("Some\nLonger Text\nis").setX(0).setY(0).setHeight(427).setWidth(240)));
+		popup.attachWidget(null, ((GenericLabel) new GenericLabel("Some\nLonger Text\nis").setX(0).setY(0).setHeight(427).setWidth(240)));
+		popup.attachWidget(null, ((GenericLabel) new GenericLabel("Some\nLonger Text\nis").setX(0).setY(0).setHeight(427).setWidth(240)));
 
 		popup.attachWidget(null, new GenericLabel("Bottom right of middle").setX(130).setY(230).setHeight(427).setWidth(240));
 		((SpoutPlayer) event.getPlayer()).getMainScreen().attachPopupScreen(popup);
