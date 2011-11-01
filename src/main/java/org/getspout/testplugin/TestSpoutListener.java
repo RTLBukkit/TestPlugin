@@ -16,7 +16,7 @@ public class TestSpoutListener extends SpoutListener {
 	public void onSpoutCraftEnable(SpoutCraftEnableEvent event) {
 		event.getPlayer().sendMessage("Testing commences!");
 		GenericPopup popup = new GenericPopup();
-		popup.attachWidget(null, new GenericButton("Test").setAlignX(Align.FIRST).setX(70).setY(102).setHeight(35).setWidth(100));
+		popup.attachWidget(null, new GenericButton("Test")).setX(70).setY(102).setHeight(35).setWidth(100);
 		popup.attachWidget(null, new GenericTextField().setX(70).setY(142).setHeight(35).setWidth(100));
 		popup.attachWidget(null, new GenericSlider().setX(70).setY(242).setHeight(35).setWidth(100));
 		popup.attachWidget(null, ((GenericLabel) new GenericLabel("Some\nLonger Text\nis").setX(0).setY(0).setHeight(427).setWidth(240)));
